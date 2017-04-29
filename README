@@ -1,0 +1,10 @@
+
+Please use google chrome browser
+
+The website has 4 pages (4 html files too)
+index is the home pages
+pp1 - product page 2 (has hide show toggle effects -on click)
+pp2 - product page 2 (has fade and animate effects -on doubleclick and hover in and out respectively )
+pp3 - product page 3 (has keypress and keydown events - on entering text and pressing any button respectively)
+contact us - contact page (has a table with add and delete button, with other effects required)
+

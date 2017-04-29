@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product Page 3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.row{margin:0;}
+.fadediv{height:50px;  background-color:lightgreen;}
+#keydiv1{height:200px; width: 200px; background-color:yellow;}
+#keydiv3{height:200px; width: 200px; background-color:purple;}
+#keydiv4{height:200px; width: 200px; background-color:georgian;}
+#keydiv2{height:200px; width: 200px; background-color:blue;}
+#rangeinput{width: 33.33333%;  margin: 2px; display: inline-block;}
+.divblock{ margin: 2px;}
+</style>  
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="index.html">MY WEBSITE</a>
+			</div>
+			<ul class="nav navbar-nav">
+			  <li ><a href="index.html">Home</a></li>
+			  <li><a href="PP1.html">Product Page1</a></li>
+			  <li><a href="PP2.html">Product Page2</a></li>
+			  <li class="active" ><a href="PP3.html">Product Page3</a></li>
+			  <li><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		  </div>
+	</nav> 
+	<div id="tablet">
+		<div class="container">
+		  <hr/>
+		  <h1><b>Keypress and Keydown Events</b></h1>
+
+		  <div class="row">
+			<h4><b>Chain Fading Events</b></h4>
+			<br/>
+			<div>
+			  <div>
+				<p>Press any key in the input to start the chaining of 3 fading events</p>
+				<input type="text" id="keyinput1">
+			  </div>
+			  <br/>
+			  <div class="fadediv col-sm-offset-4 col-sm-4" id="keydiv1"> </br> </br> </br> </br> </br> </br> </br> </br>
+			  <div class="fadediv col-sm-offset-4 col-sm-4" id="keydiv3"> </br> </br> </br> </br> </br> </br> </br>
+			  <div class="fadediv col-sm-offset-4 col-sm-4" id="keydiv4"> </br> </br> </br> </br> </br> </br> </br> </br> </br></br>
+			  </br></br></br>
+			  </div>
+			</div>
+		  </div>
+			<br/></br> </br> </br> </br> </br> </br> </br> </br> </br> </br>
+			  </br></br> </br> </br> </br> </br> </br> </br> </br> </br> </br> </br></br> 
+			  </br> </br> </br> </br> </br> </br> </br> </br> </br> </br>
+		  <div class="row">
+			<h4><b>Chain Animate Events</b></h4>
+			<br/>
+			<div>
+			  <div>
+				<p>Press any key in the input to start the chaining of 3 animate events</p>
+				<input type="text" id="keyinput2">
+			  </div>
+			  
+			  <div class="fadediv col-sm-offset-4 col-sm-4" id="keydiv2">
+			  </div>
+			</div>
+		  </div>
+    </div>
+	<script>
+		$(document).ready(function(){
+		$("#keyinput1").keypress(function() {
+			$("#keydiv1").fadeOut(2000).fadeIn(2000).fadeTo(2000,0.2).fadeTo(2000,1);
+		});
+		});
+		$(document).ready(function(){
+		$("#keyinput2").keydown(function() {
+			$("#keydiv2")
+				.animate({
+					width:"500px",
+					height:"500px"
+				},2000)
+				.animate({
+					left:"-250px",
+					opacity:0.2
+				},2000)
+				.animate({
+					width:"200px",
+					height:"200px",
+					left:"0px",
+					opacity:1
+				},2000);
+		});
+		});
+	</script>
+	</body>
+	</html>
